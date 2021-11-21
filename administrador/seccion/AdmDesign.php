@@ -21,12 +21,14 @@ switch ($accion) {
 
         if ($tmpImagen != "") {
             move_uploaded_file($tmpImagen, "../../img/" . $nombreArchivo);
+            
         }
 
         $sentenciaSQL->bindParam(':imagen', $nombreArchivo);
         $sentenciaSQL->execute();
-
+        
         header("Location:AdmDesign.php");
+     //   echo "Agregar";
         break;
     case "Modificar":
         $sentenciaSQL = $conexion->prepare("UPDATE design SET nombre=:nombre WHERE id=:id");
@@ -60,11 +62,11 @@ switch ($accion) {
             
         }
         header("Location:AdmDesign.php");
-        //  echo "Modificar";
+        // echo "Modificar";
         break;
     case "Cancelar":
         header("Location:AdmDesign.php");
-        // echo "Cancelar";
+       //echo "Cancelar";
         break;
     case "Seleccionar":
         $sentenciaSQL = $conexion->prepare("SELECT * FROM design WHERE id=:id");
@@ -74,7 +76,7 @@ switch ($accion) {
 
         $txtNombre = $editarId['nombre'];
         $txtImagen = $editarId['imagen'];
-        //  echo "Seleccionar";
+      // echo "Seleccionar";
         break;
 
     case "Borrar":
@@ -90,7 +92,7 @@ switch ($accion) {
             }
         }
 
-        // echo "Borrar";
+      // echo "Borrar";
         $sentenciaSQL = $conexion->prepare("DELETE FROM design WHERE id=:id");
         $sentenciaSQL->bindParam(':id', $txtID);
         $sentenciaSQL->execute();
@@ -131,7 +133,7 @@ $listaDesign = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                     <?php
                     if ($txtImagen!=""){ ?>
 
-                        <img class="img-thumbnail rounded" src="../../img/<?php echo $txtImagen; ?>" width="50" alt="">
+                        <img class="img-thumbnail rounded" width="" src="../../img/<?php echo $txtImagen; ?>" width="50" alt="">
                     <?php } ?>
 
                     <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen del diseño">

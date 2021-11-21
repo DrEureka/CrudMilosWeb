@@ -15,7 +15,7 @@
                <a class="nav-link" href="#">Milos Sublimados</a>
            </li>
            <li class="nav-item">
-               <a class="nav-link" href="Index.php">Inicio</a>
+               <a class="nav-link" href="index.php">Inicio</a>
            </li>
            <li class="nav-item">
                <a class="nav-link" href="Design.php">Diseños</a>
@@ -24,7 +24,7 @@
                <a class="nav-link" href="Redes.php">Redes sociales</a>
            </li>
            <li class="nav-item">
-               <a class="nav-link" href="./administrador/Index.php">Login CRUD</a>
+               <a class="nav-link" href="./administrador/index.php">Login CRUD</a>
            </li>
        </ul>
    </nav>

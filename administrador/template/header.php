@@ -25,15 +25,15 @@ else{
 </head>
 
 <body>
-  <?php $url = "http://" . $_SERVER['HTTP_HOST'] . "/Milosweb" ?>
+  <?php $url = "http://" . $_SERVER['HTTP_HOST']. "/Milosweb" ?>
 
   <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="nav navbar-nav">
       <a class="nav-item nav-link active" href="#">Administrador <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="<?php echo $url; ?>/Administrador/Inicio.php">Inicio</a>
-      <a class="nav-item nav-link" href="<?php echo $url; ?>/Administrador/seccion/admDesign.php">Administrador de diseños</a>
+      <a class="nav-item nav-link" href="<?php echo $url; ?>/administrador/Inicio.php">Inicio</a>
+      <a class="nav-item nav-link" href="<?php echo $url; ?>/administrador/seccion/AdmDesign.php">Administrador de diseños</a>
       <a class="nav-item nav-link" href="<?php echo $url; ?>">Ver sitio</a>
-      <a class="nav-item nav-link" href="<?php echo $url; ?>/Administrador/seccion/loginOut.php">Cerrar sesion</a>
+      <a class="nav-item nav-link" href="<?php echo $url; ?>/administrador/seccion/loginOut.php">Cerrar sesion</a>
     </div>
   </nav>
 
